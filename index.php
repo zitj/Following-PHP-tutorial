@@ -46,9 +46,20 @@ $peopleGroupThree = array_merge($peopleGroupOne, $peopleGroupTwo);
 // echo print_r($peopleGroupTwo);
 // echo print_r(array_merge($peopleGroupOne, $peopleGroupTwo));
 $peopleGroupThree[] = "Sally";
-array_push($peopleGroupThree, "Dally");
-echo print_r($peopleGroupThree);
+// array_push($peopleGroupThree, "Dally");
+// echo print_r($peopleGroupThree);
 
+
+// Associative Arrays
+
+$fruitColorGroupOne = ["banana" => "yellow", "orange"=>"orange"];
+$fruitColorGroupTwo = array("apple" => "green", "cherry"=>"dark red");
+// echo $fruitColorGroupOne[orange];
+// echo $fruitColorGroupTwo[apple];
+$fruitColorGroupThree = array_merge($fruitColorGroupOne, $fruitColorGroupTwo);
+$fruitColorGroupThree["grapes"] = "purple"; 
+// echo print_r($fruitColorGroupThree);
+echo count($fruitColorGroupThree);
 
 ?>
 
