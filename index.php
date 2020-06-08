@@ -1,9 +1,42 @@
 <?php 
+
+// Strings
+
 $firstVariable = 'I am the first variable.';
 define('CONSTANT_VARIABLE', 'I am the constant variable');
 $stringOne = 'Concatination is a ';
 $stringTwo = 'cool thing.';
 $stringLength = strlen($stringOne);
+
+// Numbers
+$radius = 20;
+$pi = 3.14;
+
+//basic operators are +, -, *, /, ** 
+//order of operation((B) I** D/ M* A+ S-) 
+
+//examples
+
+// echo 2 * (9 - 5) / 2;
+// echo $radius**2 * $pi; 
+
+//increment and decrement operators
+$radius--;
+$radius++;
+// echo $radius;
+
+//shorthand operators
+$radius += 100;
+$radius -= 100;
+$radius *= 100;
+$radius /= 100;
+// echo $radius;
+
+//number functions
+//echo floor($pi);
+// echo ceil($pi);
+echo pi();
+
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +44,7 @@ $stringLength = strlen($stringOne);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>h1{color:#333333;font-size:1.5em;}</style>
     <title>My first php tutorial ever</title>
 </head>
 <body>
