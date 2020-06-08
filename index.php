@@ -12,6 +12,6 @@
     <title>My first php tutorial ever</title>
 </head>
 <body>
-    <h1><?echo 'Hello world!' ?></h1>
+    <h1><?php echo 'Hello world!' ?></h1>
 </body>
 </html>
