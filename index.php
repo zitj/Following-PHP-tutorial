@@ -35,7 +35,20 @@ $radius /= 100;
 //number functions
 //echo floor($pi);
 // echo ceil($pi);
-echo pi();
+// echo pi();
+
+// Indexed Arrays 
+
+$peopleGroupOne = ["Stephan", "Stacey", "John", "Hong-Xi"];
+$peopleGroupTwo = array("Marley", "Bob", "Lucita", "Carrey");
+$peopleGroupThree = array_merge($peopleGroupOne, $peopleGroupTwo);
+// echo $peopleGroupOne[2];
+// echo print_r($peopleGroupTwo);
+// echo print_r(array_merge($peopleGroupOne, $peopleGroupTwo));
+$peopleGroupThree[] = "Sally";
+array_push($peopleGroupThree, "Dally");
+echo print_r($peopleGroupThree);
+
 
 ?>
 
