@@ -59,7 +59,24 @@ $fruitColorGroupTwo = array("apple" => "green", "cherry"=>"dark red");
 $fruitColorGroupThree = array_merge($fruitColorGroupOne, $fruitColorGroupTwo);
 $fruitColorGroupThree["grapes"] = "purple"; 
 // echo print_r($fruitColorGroupThree);
-echo count($fruitColorGroupThree);
+// echo count($fruitColorGroupThree);
+
+// Multi-dimensional Arrays
+
+$products = [
+    ["piece" => "t-shirt", "brand" => "calvin klein", "material" => "cotton", "price" => 299],
+    ["piece" => "sweater", "brand" => "lacoste", "material" => "wool", "price" => 649],
+    ["piece" => "jeans", "brand" => "levis", "material" => "texas", "price" => 120]
+];
+
+$products[] = ["piece" => "shoes", "brand" => "paccioti", "material" => "leather", "price" => 2450];
+// echo $products[2]["price"];
+// echo print_r($products);
+// echo count($products);
+
+$poppedProduct = array_pop($products);
+echo print_r($poppedProduct);
+
 
 ?>
 
