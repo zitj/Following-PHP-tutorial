@@ -93,6 +93,20 @@ $writers = ["Dostoyevsky", "Tolstoy", "Orwel"];
 //     echo strtoupper($product["brand"]) . " " . $product["piece"] . " - " . $product["price"] . " $" . "<br>";
 // }
 
+// Functions
+
+function sayHello($name = "lad", $time = "day"){
+    echo "Good $time $name ";
+}
+// sayHello("Mr. Bronson", "morning");
+
+function formatArgument($argument){
+    return "Good {$argument["time"]} {$argument["name"]}";
+}
+
+$formatedArgumentVariable = formatArgument(["time" => "morning" , "name" => "Mr.Bronson"]);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -116,13 +130,16 @@ $writers = ["Dostoyevsky", "Tolstoy", "Orwel"];
     <h1><?php echo strtolower($stringTwo) . ' function string to lower case' ?></h1>
     <h1><?php echo str_replace('o', '0', $stringTwo) . ' function string replace' ?></h1> -->
 
+    <h4><?php echo $formatedArgumentVariable ?></h4>
     <h1>PRODUCTS</h1>
 
     <ul>
         <?php foreach($products as $product){ ?>
         <?php if($product["price"] > 200){?>
+        
             <h3><?php echo strtoupper($product["brand"]) . " " . $product["piece"] ?></h3>
             <p><?php echo "$ " . $product["price"]?></p>
+            <button>Add</button>
         <?php } ?>
         <?php } ?>
     </ul>
