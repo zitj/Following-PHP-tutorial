@@ -120,8 +120,10 @@ $writers = ["Dostoyevsky", "Tolstoy", "Orwel"];
 
     <ul>
         <?php foreach($products as $product){ ?>
+        <?php if($product["price"] > 200){?>
             <h3><?php echo strtoupper($product["brand"]) . " " . $product["piece"] ?></h3>
             <p><?php echo "$ " . $product["price"]?></p>
+        <?php } ?>
         <?php } ?>
     </ul>
     
