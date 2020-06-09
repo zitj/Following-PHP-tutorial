@@ -75,8 +75,23 @@ $products[] = ["piece" => "shoes", "brand" => "paccioti", "material" => "leather
 // echo count($products);
 
 $poppedProduct = array_pop($products);
-echo print_r($poppedProduct);
+// echo print_r($poppedProduct);
 
+// LOOPS IN PHP
+
+$writers = ["Dostoyevsky", "Tolstoy", "Orwel"];
+
+// for($i = 0; $i < count($writers); $i++){
+//     echo $writers[$i] . "<br>";
+// }
+// echo "<br>";
+// foreach ($writers as $writer){
+//     echo $writer . "<br>";
+// }
+
+// foreach ($products as $product){
+//     echo strtoupper($product["brand"]) . " " . $product["piece"] . " - " . $product["price"] . " $" . "<br>";
+// }
 
 ?>
 
@@ -89,7 +104,7 @@ echo print_r($poppedProduct);
     <title>My first php tutorial ever</title>
 </head>
 <body>
-    <h1><?php echo $firstVariable ?></h1>
+    <!-- <h1><?php echo $firstVariable ?></h1>
     <h1><?php echo CONSTANT_VARIABLE ?></h1>
     <h1><?php echo $stringOne . $stringTwo ?></h1>
     <h1><?php echo "$stringOne $stringTwo" ?></h1>
@@ -99,7 +114,16 @@ echo print_r($poppedProduct);
     <h1><?php echo "String length of \"stringOne\" is $stringLength" ?></h1>
     <h1><?php echo strtoupper($stringTwo) . ' function string to upper case' ?></h1>
     <h1><?php echo strtolower($stringTwo) . ' function string to lower case' ?></h1>
-    <h1><?php echo str_replace('o', '0', $stringTwo) . ' function string replace' ?></h1>
+    <h1><?php echo str_replace('o', '0', $stringTwo) . ' function string replace' ?></h1> -->
+
+    <h1>PRODUCTS</h1>
+
+    <ul>
+        <?php foreach($products as $product){ ?>
+            <h3><?php echo strtoupper($product["brand"]) . " " . $product["piece"] ?></h3>
+            <p><?php echo "$ " . $product["price"]?></p>
+        <?php } ?>
+    </ul>
     
 </body>
 </html>
