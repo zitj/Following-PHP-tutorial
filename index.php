@@ -106,6 +106,29 @@ function formatArgument($argument){
 
 $formatedArgumentVariable = formatArgument(["time" => "morning" , "name" => "Mr.Bronson"]);
 
+// Scope of variables
+$test = "Playing around with scope.";
+
+function variableScope($test){
+    $test = "Changing local variable";
+    echo $test;
+}
+// function variableScopeTwo($test){
+//     global $test;
+//     $test = "Changing global variable";
+//     echo $test;
+// }
+
+function variableScopeTwo(&$test){
+    $test = "Changing global variable";
+    echo $test;
+}
+
+variableScope($test);
+echo "<br>";
+variableScopeTwo($test);
+echo "<br>";
+echo $test;
 
 ?>
 
