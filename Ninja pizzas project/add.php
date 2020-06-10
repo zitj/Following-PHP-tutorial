@@ -4,17 +4,26 @@ if(isset($_POST['submit'])){
     if(empty($_POST['email'])){
         echo 'An email is required!';
     }else{
-        echo htmlspecialchars($_POST['email']);
+        $email = $_POST['email'];
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            echo 'email must be valid';
+        }
     }
     if(empty($_POST['title'])){
         echo 'A title is required!';
     }else{
-        echo htmlspecialchars($_POST['title']);
+        $title = $_POST['title'];
+        if(!preg_match('/^[a-zA-Z\s]+$/', $title)){
+            echo 'Title must be letters and spaces only';
+        }
     }
-    if(empty($_POST['ingredient'])){
+    if(empty($_POST['ingredients'])){
         echo 'At least one ingredient is required!';
     }else{
-        echo htmlspecialchars($_POST['ingredient']);
+        $ingredients = $_POST['ingredients'];
+        if(!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $ingredients)){
+            echo 'Ingredients must be coma separated list';
+        }
     }
 }
 
@@ -34,7 +43,7 @@ if(isset($_POST['submit'])){
         <label for="">Ingredients (comma separated):</label>
         <input type="text" name="ingredients" placeholder="ingredients" autocomplete="off">
         <div class="center">
-            <input type="submit" name="submit" value="submit" class="btn brand z-depth-0">
+            <input id="submit" type="submit" name="submit" value="submit" class="btn brand z-depth-0">
         </div>
     </form>
     </section>
