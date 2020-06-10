@@ -1,5 +1,11 @@
 <?php 
-
+if(isset($_POST['submit'])){
+    echo $_POST['email'];
+    echo " ";
+    echo $_POST['title'];
+    echo " ";
+    echo $_POST['ingredients'];
+}
 
 ?>
 <!DOCTYPE html>
@@ -9,7 +15,7 @@
 
     <section class="container gray-text">
     <h4 class="center">Add a Pizza</h4>
-    <form action="" class="white">
+    <form action="add.php" class="white" method="POST">
         <label for="">Your E-mail:</label>
         <input type="text" name="email"  placeholder="email" autocomplete="off">
         <label for="">Pizza Title:</label>
