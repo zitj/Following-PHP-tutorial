@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
      <script type="text/javascript" src="js/materialize.min.js" defer></script>
     <title>Ninja pizzas</title>
     <style type="text/css">
@@ -10,6 +10,11 @@
     }
     .brand-text{
         color: #cbb09c !important;
+    }
+    form{
+        max-width: 460px;
+        margin: 20px auto;
+        padding: 20px;
     }
     </style>
 </head>
