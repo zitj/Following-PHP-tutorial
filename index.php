@@ -129,6 +129,13 @@ echo "<br>";
 variableScopeTwo($test);
 echo "<br>";
 echo $test;
+echo "<br>";
+
+
+// Include & require
+include ('content.php');
+require ('content.php');
+
 
 ?>
 
@@ -155,7 +162,9 @@ echo $test;
 
     <h4><?php echo $formatedArgumentVariable ?></h4>
     <h1>PRODUCTS</h1>
-
+    
+    <?php include ('morecontent.php') ?>
+   
     <ul>
         <?php foreach($products as $product){ ?>
         <?php if($product["price"] > 200){?>
