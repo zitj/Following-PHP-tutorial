@@ -14,10 +14,14 @@
     $result = mysqli_query($connection, $sql);
 
     //fetch the resulting rows as an array
-
     $pizzas = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
     print_r($pizzas);
+
+    //free result from memory
+    mysqli_free_result($result);
+
+    //close connection
+    mysqli_close($connection)
 
 ?>
 <!DOCTYPE html>
