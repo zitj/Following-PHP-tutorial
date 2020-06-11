@@ -29,6 +29,13 @@ if(isset($_POST['submit'])){
             $errors['ingredients'] = 'Ingredients must be coma separated list';
         }
     }
+
+    if(array_filter($errors)){
+        //there are errors in the form, hence there is no redirection to index.php
+    }else{
+        //redirecting to index.php
+        header('Location: index.php');
+    }
 }
 
 ?>
