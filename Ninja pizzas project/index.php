@@ -32,16 +32,16 @@
     <div class="container">
         <div class="row">
 
-        <?php foreach($pizzas as $pizza) { ?>
+        <?php foreach($pizzas as $pizza): ?>
             <?php $arrayOfIngredients = explode(',', $pizza['ingredients']);?>
             <div class="col s6 md3">
                 <div class="card z-depth-0">
                     <div class="card-content center">
                         <h6><?php echo htmlspecialchars($pizza['title'])?></h6>
                         <ul>
-                            <?php foreach($arrayOfIngredients as $ingredient){?>
+                            <?php foreach($arrayOfIngredients as $ingredient):?>
                                 <li><?php echo htmlspecialchars($ingredient);?></li>
-                            <?php }?>
+                            <?php endforeach; ?>
                         </ul>
                     </div><!-- end .card-content -->
                     <div class="card-action right-align">
@@ -50,7 +50,7 @@
                     </div><!-- end .card.z-depth-0 -->
             </div> <!--end .col -->
         
-        <?php } ?>
+        <?php endforeach; ?>
         </div><!-- end .row -->    
     </div><!-- end .container -->
 
