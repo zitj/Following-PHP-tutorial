@@ -16,6 +16,20 @@
         margin: 20px auto;
         padding: 20px;
     }
+    .pizza{
+        padding:20px;
+        margin:0% 50% 0%;
+        transform:translate(-50%, 0%);
+    }
+    .card .card-content{
+        padding: 0px;
+    }
+    nav{
+        margin-bottom: 100px;
+    }
+    .heading{
+        margin-bottom: 100px;
+    }
     </style>
 </head>
 <body class="grey lighten-4">

@@ -23,7 +23,7 @@
     
     <?php include 'header.php'; ?>
 
-    <h4 class="grey-text center">Pizzas!</h4>
+    <h4 class="heading grey-text center">Pizzas!</h4>
     <div class="container">
         <div class="row">
 
@@ -31,8 +31,9 @@
             <?php $arrayOfIngredients = explode(',', $pizza['ingredients']);?>
             <div class="col s6 md3">
                 <div class="card z-depth-0">
+                <img src="img/pizza.svg" alt="pizza_img" class="pizza">
                     <div class="card-content center">
-                        <h6><?php echo htmlspecialchars($pizza['title'])?></h6>
+                        <h5><?php echo htmlspecialchars($pizza['title'])?></h5>
                         <ul>
                             <?php foreach($arrayOfIngredients as $ingredient):?>
                                 <li><?php echo htmlspecialchars($ingredient);?></li>

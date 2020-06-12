@@ -41,8 +41,8 @@ if(isset($_GET['id'])){
 
     <div class="container center">
         <?php if($pizza):?>
-
             <h4><?php echo htmlspecialchars($pizza['title']);?></h4>
+            <img src="img/pizza.svg" alt="pizza_img" class="pizza">
             <p>Created by: <?php echo htmlspecialchars($pizza['email']);?></p>
             <p><?php echo date($pizza['created_at']);?></p>
             <h5>Ingredients</h5>
