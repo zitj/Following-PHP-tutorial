@@ -1,4 +1,5 @@
 <?php 
+include('database_connection.php');
 
 $errors = ['email' => '', 'title' => '', 'ingredients' => ''];
 $email = $title = $ingredients = '';
@@ -32,9 +33,24 @@ if(isset($_POST['submit'])){
 
     if(array_filter($errors)){
         //there are errors in the form, hence there is no redirection to index.php
+
     }else{
         //redirecting to index.php
+        $email = mysqli_real_escape_string($connection, $_POST['email']);
+        $title = mysqli_real_escape_string($connection, $_POST['title']);
+        $ingredients = mysqli_real_escape_string($connection, $_POST['ingredients']);
+        
+        //create sql
+        $sql = "INSERT INTO pizzas(title, email, ingredients) VALUES('$title', '$email', '$ingredients')";
+        
+        
+    }
+    if(mysqli_query($connection, $sql)){
+        //success
         header('Location: index.php');
+    }else{
+        //error
+        echo 'Query error' . mysqli_query($connection);
     }
 }
 
