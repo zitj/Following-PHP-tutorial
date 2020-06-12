@@ -18,7 +18,6 @@ if(isset($_GET['id'])){
     mysqli_free_result($result);
     mysqli_close($connection);
 
-    print_r($pizza);
 }
 
 ?>
@@ -26,7 +25,22 @@ if(isset($_GET['id'])){
 <html lang="en">
 <?php include 'header.php'; ?>
 
-<h2>Details</h2>
+    <div class="container center">
+        <?php if($pizza):?>
+
+            <h4><?php echo htmlspecialchars($pizza['title']);?></h4>
+            <p>Created by: <?php echo htmlspecialchars($pizza['email']);?></p>
+            <p><?php echo date($pizza['created_at']);?></p>
+            <h5>Ingredients</h5>
+            <p><?php echo htmlspecialchars($pizza['ingredients'])?></p>
+
+        <?php else:?>
+        
+            <h5>No such pizza exists!</h5>
+
+        <?php endif;?>
+        
+    </div> <!-- end .container.center -->
 
 <?php include 'footer.php'; ?>
 </html>

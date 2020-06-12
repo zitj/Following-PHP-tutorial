@@ -1,6 +1,7 @@
 <?php 
 include('database_connection.php');
 
+
 $errors = ['email' => '', 'title' => '', 'ingredients' => ''];
 $email = $title = $ingredients = '';
 
