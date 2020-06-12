@@ -40,7 +40,7 @@
                         </ul>
                     </div><!-- end .card-content -->
                     <div class="card-action right-align">
-                        <a class="brand-text" href="#">more info</a>
+                        <a class="brand-text" href="details.php?id=<?php echo $pizza['id']?>">more info</a>
                     </div><!-- end .card-action -->
                     </div><!-- end .card.z-depth-0 -->
             </div> <!--end .col -->
